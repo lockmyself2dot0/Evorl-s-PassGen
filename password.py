@@ -37,6 +37,8 @@ def is_password_correct(password: str, char_list: List[str]) -> bool:
     Returns:
         bool: правильный пароль или нет
     """
+    if len(password) < len(char_list):
+        return True
     for char in char_list:
         is_correct = False
         for value in char:
